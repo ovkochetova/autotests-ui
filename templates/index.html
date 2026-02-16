@@ -4,15 +4,47 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        h6{
+        font-size: 6px
+        }
         .h2-text{
             color: red
+        }
+        .h6-text{
+            color: yellow
+        }
+        #h1-text{
+            font-size:60px
+        }
+        div.Python > a{
+            color: green
+        }
+        ul li{
+            color: orange
+        }
+        input[type="text"]{
+            background-color: blue
+        }
+        input[type="text"]:hover{
+            background-color: purple
+        }
+        a:hover{
+            color: black
+        }
+        li::marker{
+            color: red
+        }
+        ul>li:nth-child(2){
+            font-size: 50px
         }
     </style>
 </head>
 <body>
-<div>
+<div class="Python">
     <h1 id="h1-text">H1 text</h1>
-    <h2 class="h2-text">H1 text</h2>
+    <h1 id="h1-text 2">H1 text</h1>
+    <h2 class="h2-text">H2 text</h2>
+    <h3 class="h2-text h6-text">H3 text</h3>
     <p>Browsers run web content belonging to different origins in different processes. Playwright is aligned with the modern
         browsers architecture and runs tests out-of-process. This makes <span style="color: green">Playwright</span> free of the typical in-process test
         runner limitations.</p>
@@ -56,6 +88,10 @@
         </tr>
         </tbody>
     </table>
+</div>
+<div class = "JavaScript">
+    <a href = "https://playwright.dev/python/" target = "_blank">Selenium</a>
+    <h2 class="h2-text">Another H2 text</h2>
 </div>
 </body>
 </html>
