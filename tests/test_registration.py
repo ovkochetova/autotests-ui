@@ -1,6 +1,8 @@
+import pytest
 from playwright.sync_api import sync_playwright
 
-
+@pytest.mark.regression
+@pytest.mark.registration
 def test_success_registration():
     # Открываем браузер с использованием Playwright
     with sync_playwright() as playwright:
