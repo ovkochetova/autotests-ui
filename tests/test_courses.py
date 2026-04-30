@@ -1,8 +1,6 @@
 import pytest
 from playwright.sync_api import sync_playwright, expect
 
-from tests.conftest import chromium_page_with_state
-
 
 @pytest.mark.courses
 @pytest.mark.regression
