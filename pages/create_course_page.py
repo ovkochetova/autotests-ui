@@ -97,7 +97,7 @@ class CreateCoursePage(BasePage):
         expect(self.preview_image).to_be_visible()
 
     def upload_preview_image(self, file: str):
-        self.preview_image_upload_input.set_input_files(file)
+        self.preview_image_upload_input.set_input_files('./testdata/files/image.png')
 
     def check_visible_create_course_form(
             self,

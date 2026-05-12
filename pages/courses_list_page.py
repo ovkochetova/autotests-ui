@@ -2,7 +2,7 @@ from playwright.sync_api import Page, expect
 
 from pages.base_page import BasePage
 
-class CourseListPage(BasePage):
+class CoursesListPage(BasePage):
     def __init__(self, page:Page):
         super().__init__(page)
 
@@ -25,7 +25,7 @@ class CourseListPage(BasePage):
 
     def check_visible_courses_title(self):
         expect(self.courses_title).to_be_visible()
-        expect(self.empty_view_title).to_have_text('Courses')
+        expect(self.courses_title).to_have_text('Courses')
 
     def check_visible_empty_view(self):
         expect(self.empty_view_icon).to_be_visible()
@@ -48,7 +48,7 @@ class CourseListPage(BasePage):
         expect(self.course_title.nth(index)).to_have_text(title)
 
         expect(self.course_max_score_text.nth(index)).to_be_visible()
-        expect(self.course_min_score_text.nth(index)).to_have_text(f'Max score: {max_score}')
+        expect(self.course_max_score_text.nth(index)).to_have_text(f'Max score: {max_score}')
 
         expect(self.course_min_score_text.nth(index)).to_be_visible()
         expect(self.course_min_score_text.nth(index)).to_have_text(f'Min score: {min_score}')
