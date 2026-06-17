@@ -23,7 +23,7 @@ class CreateCourseExerciseFormComponent(BaseComponent):
         self.delete_exercise_button.click(index=index)
 
     def check_visible(self, index: int, title: str, description: str):
-        self.subtitle.check_visible()
+        self.subtitle.check_visible(index=index)
         self.subtitle.check_have_text(f"#{index + 1} Exercise", index=index)
 
         self.title_input.check_visible(index=index)
