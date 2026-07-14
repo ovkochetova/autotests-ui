@@ -33,3 +33,4 @@ class CourseViewComponent(BaseComponent):
  
         self.estimated_time_text.check_visible(nth=index)
         self.estimated_time_text.check_have_text(f"Estimated time: {estimated_time}", nth=index)
+        self.page.wait_for_timeout(1000)
